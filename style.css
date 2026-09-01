@@ -1,5 +1,51 @@
 body {
     margin: 0px; /* get rid of space around edges*/
+    background-image: url(src/5.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex
+}
+
+#header-container {
+    width: 100%;
+    justify-content: center;
+    position: top;
+}
+
+#header {
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: (255, 255, 255, 0.5);
+}
+
+#navbar {
+    justify-content: center;
+}
+
+#home-container {
+    justify-content: space-between;
+}
+
+#home-text-container {
+    flex-direction: column;
+}
+
+.name {
+    color: white;
+}
+
+#home-hello, #home-description {
+    color: white;
+}
+
+#home-image {
+    height: 400px;
+    border-radius: 5%;
 }
 
 ul {
@@ -7,11 +53,6 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
-}
-
-ul li {
-  float: left;
 }
 
 ul li a {
@@ -24,4 +65,30 @@ ul li a {
 
 ul li a:hover {
   background-color: #111111;
+  border-radius: 15%;
+}
+
+#about-container {
+    flex-direction: column;
+}
+
+.subheading-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+hr {
+    flex-grow: 1;
+}
+
+.subheading-container:first-child {
+    color: white;
+}
+
+#about-text {
+    border-radius: 5%;
+    background-color: grey;
+    color: black;
+    padding: 20px;
 }
