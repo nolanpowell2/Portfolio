@@ -4,17 +4,36 @@ VARIABLES AND GLOBAL STYLES
 ---------------------------
 */
 
+@font-face {
+    font-family: Terminal;
+    src: url(fonts/BigBlueTerminal/BigBlueTerm437NerdFont-Regular.ttf);
+}
+
+@font-face {
+    font-family: Share Tech;
+    src: url(fonts/Share_Tech/ShareTech-Regular.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    
+    font-family: Share Tech;
+}
+
 body {
     margin: 0px; /* get rid of space around edges*/
-    background-image: url(src/5.png);
+    background-image: url(pics/5.png);
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+
+    min-width: none;
 }
 
 /* used for seeing divs and stuff */
-/* div, p{
+/* div, p, nav{
     border: 1px solid white;
 } */
 
@@ -50,7 +69,8 @@ hr {
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    background-color: (255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
 }
 
 #navbar {
@@ -75,6 +95,11 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
   border-radius: 15%;
+}
+
+#navbar-name {
+    color: #00FF00;
+    font-family: Terminal;
 }
 
 /* 
@@ -143,8 +168,8 @@ ul li a:hover {
 
 #about-text {
     border-radius: 5%;
-    background-color: grey;
-    color: black;
+    background-color: #111111;
+    color: white;
     padding: 20px;
 }
 
@@ -165,14 +190,14 @@ ul li a:hover {
 .project-example-container {
     text-decoration: none;
     flex-direction: column;
-    background-color: grey;
+    background-color: #111111;
     padding: 10px;
     border-radius: 2%;
 }
 
 /* change later to make project name text diff color */
 .project-example-container > * {
-    color: black; 
+    color: white; 
 }
 
 .project-image {
