@@ -1,19 +1,49 @@
+/* 
+---------------------------
+VARIABLES AND GLOBAL STYLES 
+---------------------------
+*/
+
 body {
     margin: 0px; /* get rid of space around edges*/
     background-image: url(src/5.png);
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* used for seeing divs and stuff */
+/* div, p{
+    border: 1px solid white;
+} */
+
+main {
+    width: 80%;
+    margin: 0 auto 
 }
 
 .container {
     display: flex
 }
 
+.name {
+    color: white;
+}
+
+hr {
+    flex-grow: 1;
+}
+
+/* 
+------------------------
+       HEADER 
+------------------------
+*/
+
 #header-container {
     width: 100%;
     justify-content: center;
-    position: top;
 }
 
 #header {
@@ -25,27 +55,6 @@ body {
 
 #navbar {
     justify-content: center;
-}
-
-#home-container {
-    justify-content: space-between;
-}
-
-#home-text-container {
-    flex-direction: column;
-}
-
-.name {
-    color: white;
-}
-
-#home-hello, #home-description {
-    color: white;
-}
-
-#home-image {
-    height: 400px;
-    border-radius: 5%;
 }
 
 ul {
@@ -68,6 +77,56 @@ ul li a:hover {
   border-radius: 15%;
 }
 
+/* 
+--------------------------
+        HERO
+-------------------------- 
+*/
+
+#home-image {
+    height: 300px;
+    border-radius: 5%;
+}
+
+#home-image-container {
+    justify-content: center;
+    align-items: center;
+}
+
+#home-container {
+    justify-content: center;
+    width: 100%;
+}
+
+#home-text-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-hello, #home-description {
+    color: white;
+}
+
+.parent {
+    flex-wrap: wrap;
+}
+
+.children {
+    flex: 1 1 auto;
+}
+
+.children > * {
+    max-width: 400px;
+}
+
+
+/* 
+----------------------------
+         ABOUT
+---------------------------- 
+*/
+
 #about-container {
     flex-direction: column;
 }
@@ -76,10 +135,6 @@ ul li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-hr {
-    flex-grow: 1;
 }
 
 .subheading-container:first-child {
@@ -92,3 +147,36 @@ hr {
     color: black;
     padding: 20px;
 }
+
+/* 
+-------------------------------
+         PROJECTS
+------------------------------- 
+*/
+
+#project-examples-container {
+    justify-content: center;
+}
+
+#projects-container {
+    flex-direction: column;
+}
+
+.project-example-container {
+    text-decoration: none;
+    flex-direction: column;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 2%;
+}
+
+/* change later to make project name text diff color */
+.project-example-container > * {
+    color: black; 
+}
+
+.project-image {
+    width: 100%;
+}
+
+
