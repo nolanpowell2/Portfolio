@@ -60,11 +60,27 @@ hr {
     background-color: #111111;
 }
 
+.subheading-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.subheading-container:first-child {
+    color: white;
+}
+
+
 /* 
 ------------------------
        HEADER 
 ------------------------
 */
+
+#header {
+    padding: 20px 20px;
+}
 
 #header-container {
     width: 100%;
@@ -105,7 +121,7 @@ ul li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  border: 2px;
+  border: 2px solid transparent; /* FIX THIS */
 }
 
 ul li a:hover {
@@ -174,16 +190,6 @@ ul li a:hover {
     flex-direction: column;
 }
 
-.subheading-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.subheading-container:first-child {
-    color: white;
-}
-
 #about-text {
     color: white;
     padding: 20px;
@@ -197,6 +203,8 @@ ul li a:hover {
 
 #project-examples-container {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 #projects-container {
@@ -207,6 +215,9 @@ ul li a:hover {
     text-decoration: none;
     flex-direction: column;
     padding: 10px;
+    flex: 1 1 300px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .project-example-container:hover {
@@ -216,6 +227,7 @@ ul li a:hover {
 /* change later to make project name text diff color */
 .project-example-container > * {
     color: white; 
+
 }
 
 .project-image {
