@@ -54,6 +54,12 @@ hr {
     flex-grow: 1;
 }
 
+.box {
+    border: 2px solid #3a3b3a80;
+    border-radius: 1rem;
+    background-color: #111111;
+}
+
 /* 
 ------------------------
        HEADER 
@@ -63,6 +69,14 @@ hr {
 #header-container {
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#navbar-container,
+#title-container {
+    justify-content: center;
+    flex: 1 1 auto;
 }
 
 #header {
@@ -71,6 +85,7 @@ hr {
     width: 80%;
     background-color: rgba(0, 0, 0, 0.5);
     flex-wrap: wrap;
+    border-radius: 1rem;
 }
 
 #navbar {
@@ -90,11 +105,13 @@ ul li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  border: 2px;
 }
 
 ul li a:hover {
   background-color: #111111;
-  border-radius: 15%;
+  border-radius: 1rem;
+  border: 2px solid #3a3b3a
 }
 
 #navbar-name {
@@ -110,7 +127,7 @@ ul li a:hover {
 
 #home-image {
     height: 300px;
-    border-radius: 5%;
+    border-radius: 1rem;
 }
 
 #home-image-container {
@@ -129,8 +146,9 @@ ul li a:hover {
     align-items: center;
 }
 
-#home-hello, #home-description {
+#home-text-container > * {
     color: white;
+    font-size: 2em;
 }
 
 .parent {
@@ -167,8 +185,6 @@ ul li a:hover {
 }
 
 #about-text {
-    border-radius: 5%;
-    background-color: #111111;
     color: white;
     padding: 20px;
 }
@@ -190,9 +206,11 @@ ul li a:hover {
 .project-example-container {
     text-decoration: none;
     flex-direction: column;
-    background-color: #111111;
     padding: 10px;
-    border-radius: 2%;
+}
+
+.project-example-container:hover {
+    border-color: #3a3b3a
 }
 
 /* change later to make project name text diff color */
